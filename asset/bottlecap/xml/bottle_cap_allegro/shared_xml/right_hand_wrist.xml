@@ -1,0 +1,132 @@
+<mujoco model="allegro_right">
+
+    <body name="palm" quat="0 1 0 1" childclass="allegro_right">
+      <!-- <inertial mass="0.4154" pos="0 0 0.0475" diaginertia="1e-4 1e-4 1e-4"/> -->
+      <geom class="palm_visual" mesh="base_link"/>
+      <geom class="palm_collision"/>
+      <joint class="wrist_y" name="rh_WRJ2"/>
+      <joint class="wrist_x" name="rh_WRJ1"/>
+      <site name="fs_palm" pos="0.01 -0.03 -0.06" rgba="0.8 0.2 0.3 1" type="cylinder" size="0.01 0.004" euler="0 1.57 0"/>
+      <site name="fs_ffbase" pos="0.01 -0.000 -0.01" rgba="0.8 0.2 0.3 1" type="cylinder" size="0.01 0.004" euler="0 1.57 0"/>
+      <site name="fs_mfbase" pos="0.01 0.04 -0.01" rgba="0.8 0.2 0.3 1" type="cylinder" size="0.01 0.004" euler="-0 1.57 0"/>
+      <site name="fs_rfbase" pos="0.01 -0.04 -0.01" rgba="0.8 0.2 0.3 1" type="cylinder" size="0.01 0.004" euler="0 1.57 0"/>
+<!--      <site name="fs_ffdistal" pos="0 -0.005 0.02" rgba="0.8 0.2 0.3 1" type="cylinder" size="0.007 0.004" euler="-1.57 0 0"/>-->
+<!--      <site name="fs_ffdistal" pos="0 -0.005 0.02" rgba="0.8 0.2 0.3 1" type="cylinder" size="0.007 0.004" euler="-1.57 0 0"/>-->
+      <!-- First finger -->
+      <body name="ff_base" pos="0 0.0435 -0.001542" quat="0.999048 -0.0436194 0 0">
+        <joint name="ffj0" class="base"/>
+        <geom class="base_visual"/>
+        <geom class="base_collision"/>
+        <body name="ff_proximal" pos="0 0 0.0164">
+          <joint name="ffj1" class="proximal"/>
+          <geom class="proximal_visual"/>
+          <geom class="proximal_collision"/>
+           <site name="fs_ffj1" pos="0.01 -0.000 0.03" rgba="0.8 0.2 0.3 1" type="cylinder" size="0.01 0.004" euler="0 1.57 0"/>
+          <body name="ff_medial" pos="0 0 0.054">
+            <joint name="ffj2" class="medial"/>
+            <geom class="medial_visual"/>
+            <geom class="medial_collision"/>
+            <site name="fs_ffj2" pos="0.01 -0.000 0.03" rgba="0.8 0.2 0.3 1" type="cylinder" size="0.01 0.004" euler="0 1.57 0"/>
+            <body name="ff_distal" pos="0 0 0.0384">
+              <joint name="ffj3" class="distal"/>
+              <geom class="distal_visual"/>
+              <geom class="distal_collision"/>
+              <body name="ff_tip">
+                <geom class="fingertip_visual"/>
+                <geom class="fingertip_collision"/>
+                <site name="fs_ffj3" pos="0.0 -0.000 0.027" rgba="0.8 0.2 0.3 1" type="sphere" size="0.014" euler="0 1.57 0"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <!-- Middle finger -->
+      <body name="mf_base" pos="0 0 0.0007">
+        <joint name="mfj0" class="base"/>
+        <geom class="base_visual"/>
+        <geom class="base_collision"/>
+        <body name="mf_proximal" pos="0 0 0.0164">
+          <joint name="mfj1" class="proximal"/>
+          <geom class="proximal_visual"/>
+          <geom class="proximal_collision"/>
+          <site name="fs_mfj1" pos="0.01 -0.000 0.03" rgba="0.8 0.2 0.3 1" type="cylinder" size="0.01 0.004" euler="0 1.57 0"/>
+          <body name="mf_medial" pos="0 0 0.054">
+            <joint name="mfj2" class="medial"/>
+            <geom class="medial_visual"/>
+            <geom class="medial_collision"/>
+            <site name="fs_mfj2" pos="0.01 -0.000 0.03" rgba="0.8 0.2 0.3 1" type="cylinder" size="0.01 0.004" euler="0 1.57 0"/>
+            <body name="mf_distal" pos="0 0 0.0384">
+              <joint name="mfj3" class="distal"/>
+              <geom class="distal_visual"/>
+              <geom class="distal_collision"/>
+              <body name="mf_tip">
+                <geom class="fingertip_visual"/>
+                <geom class="fingertip_collision"/>
+                <site name="fs_mfj3" pos="0.0 -0.000 0.027" rgba="0.8 0.2 0.3 1" type="sphere" size="0.014" euler="0 1.57 0"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <!-- Ring finger -->
+      <body name="rf_base" pos="0 -0.0435 -0.001542" quat="0.999048 0.0436194 0 0">
+        <joint name="rfj0" class="base"/>
+        <geom class="base_visual"/>
+        <geom class="base_collision"/>
+
+        <body name="rf_proximal" pos="0 0 0.0164">
+          <joint name="rfj1" class="proximal"/>
+          <geom class="proximal_visual"/>
+          <geom class="proximal_collision"/>
+          <site name="fs_rfj1" pos="0.01 -0.000 0.03" rgba="0.8 0.2 0.3 1" type="cylinder" size="0.01 0.004" euler="0 1.57 0"/>
+          <body name="rf_medial" pos="0 0 0.054">
+            <joint name="rfj2" class="medial"/>
+            <geom class="medial_visual"/>
+            <geom class="medial_collision"/>
+            <site name="fs_rfj2" pos="0.01 -0.000 0.03" rgba="0.8 0.2 0.3 1" type="cylinder" size="0.01 0.004" euler="0 1.57 0"/>
+            <body name="rf_distal" pos="0 0 0.0384">
+              <joint name="rfj3" class="distal"/>
+              <geom class="distal_visual"/>
+              <geom class="distal_collision"/>
+              <body name="rf_tip">
+                <geom class="fingertip_visual"/>
+                <geom class="fingertip_collision"/>
+                <site name="fs_rfj3" pos="0.0 -0.000 0.027" rgba="0.8 0.2 0.3 1" type="sphere" size="0.014" euler="0 1.57 0"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <!-- Thumb -->
+      <body name="th_base" pos="-0.0182 0.019333 -0.045987" quat="0.477714 -0.521334 -0.521334 -0.477714">
+        <joint name="thj0" class="thumb_base"/>
+        <geom class="visual" mesh="link_12.0_right"/>
+        <geom class="thumb_base_collision"/>
+        <body name="th_proximal" pos="-0.027 0.005 0.0399">
+          <joint name="thj1" class="thumb_proximal"/>
+          <geom class="visual" mesh="link_13.0"/>
+          <geom class="thumb_proximal_collision"/>
+
+          <body name="th_medial" pos="0 0 0.0177">
+            <joint name="thj2" class="thumb_medial"/>
+            <geom class="visual" mesh="link_14.0"/>
+            <geom class="thumb_medial_collision"/>
+            <site name="fs_thj1" pos="0.01 -0.000 0.01" rgba="0.8 0.2 0.3 1" type="cylinder" size="0.01 0.004" euler="0 1.57 0"/>
+            <body name="th_distal" pos="0 0 0.0514">
+              <joint name="thj3" class="thumb_distal"/>
+              <geom class="visual" mesh="link_15.0"/>
+              <geom class="thumb_distal_collision"/>
+              <site name="fs_thj2" pos="0.01 -0.000 0.01" rgba="0.8 0.2 0.3 1" type="cylinder" size="0.01 0.004" euler="0 1.57 0"/>
+              <body name="th_tip">
+                <geom class="thumbtip_visual"/>
+                <geom class="thumbtip_collision"/>
+                <site name="fs_thj3" pos="0.0 -0.000 0.043" rgba="0.8 0.2 0.3 1" type="sphere" size="0.014" euler="0 1.57 0"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+
+
+</mujoco>

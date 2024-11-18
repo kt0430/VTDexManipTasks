@@ -1,0 +1,29 @@
+<mujoco model="table assets">
+
+    <include file="shared_assets.xml" />
+
+    <worldbody>
+        <light pos="0 0 1"/>
+        <light pos="0.3 0 1.5" dir="0 0 -1" directional="true"/>
+        <geom name="floor" pos="0 0 -0.5" size="0 0 0.05" type="plane" material="groundplane"/>
+<!--        <camera name="ego_camera" pos="-0.25 0.35 0.5" mode="targetbody" target="bottle_cap"/>-->
+<!--        <camera name="visualize_camera" pos="0.25 0.35 0.5" mode="targetbody" target="bottle_cap"/>-->
+        <body name="table">
+            <geom mass="1e4" rgba="0.61176471 0.61176471 0.61176471 1" pos="0 0 -0.025" size=".45 .45 0.025" type="box" />
+            <geom conaffinity="0" contype="0" mass="1e4" pos=".4 .4 -0.251" quat="0 1 0 0" size="0.02 0.25" type="cylinder" />
+            <geom conaffinity="0" contype="0" mass="1e4" pos="-.4 .4 -0.251" quat="0 1 0 0" size="0.02 0.25" type="cylinder" />
+            <geom conaffinity="0" contype="0" mass="1e4" pos=".4 -.4 -0.251" quat="0 1 0 0" size="0.02 0.25" type="cylinder" />
+            <geom conaffinity="0" contype="0" mass="1e4" pos="-.4 -.4 -0.251" quat="0 1 0 0" size="0.02 0.25" type="cylinder" />
+        </body>
+<!--        <site name="fs_ffknuckle" pos="-0.033 0 0.2" rgba="0.8 0.2 0.3 1"/>-->
+
+
+
+<!--        <body name="object" pos="0.3 0 0.1">-->
+<!--          <freejoint/>-->
+<!--          <geom type="ellipsoid" size="0.03 0.04 0.02" rgba="0.5 0.7 0.5 1" condim="6" priority="1"-->
+<!--            friction="0.5 0.01 0.003"/>-->
+<!--        </body>-->
+    </worldbody>
+
+</mujoco>

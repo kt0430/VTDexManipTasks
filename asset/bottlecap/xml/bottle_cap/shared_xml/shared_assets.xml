@@ -1,0 +1,52 @@
+<mujoco>
+    <material name="black" specular="0.5" shininess="0.25" rgba="0.16355 0.16355 0.16355 1"></material>
+    <material name="gray" specular="0.0" shininess="0.25" rgba="0.80848 0.80848 0.80848 1"></material>
+    <material name="metallic" specular="0" shininess="0.25" rgba="0.9 0.9 0.9 1"></material>
+
+    <mesh class="right_hand" file="forearm_0.obj"></mesh>
+    <mesh class="right_hand" file="forearm_1.obj"></mesh>
+    <mesh class="right_hand" file="forearm_collision.obj"></mesh>
+    <mesh class="right_hand" file="wrist.obj"></mesh>
+    <mesh class="right_hand" file="palm.obj"></mesh>
+    <mesh class="right_hand" file="f_knuckle.obj"></mesh>
+    <mesh class="right_hand" file="f_proximal.obj"></mesh>
+    <mesh class="right_hand" file="f_middle.obj"></mesh>
+    <mesh class="right_hand" file="f_distal_pst.obj"></mesh>
+    <mesh class="right_hand" file="lf_metacarpal.obj"></mesh>
+    <mesh class="right_hand" file="th_proximal.obj"></mesh>
+    <mesh class="right_hand" file="th_middle.obj"></mesh>
+    <mesh class="right_hand" file="th_distal_pst.obj"></mesh>
+</mujoco>
+
+
+<!--<mujoco>-->
+<!--    <compiler angle="radian" meshdir="../mesh" autolimits="true"></compiler>-->
+<!--    <option impratio="10"></option>-->
+<!--    <statistic extent="0.3" center="0.3 0 0"></statistic>-->
+
+<!--    <visual>-->
+<!--        <rgba haze="0.15 0.25 0.35 1"></rgba>-->
+<!--        <quality shadowsize="8192"></quality>-->
+<!--        <global azimuth="220" elevation="-30"></global>-->
+<!--    </visual>-->
+
+<!--    <asset>-->
+<!--        <material name="black" specular="0.5" shininess="0.25" rgba="0.16355 0.16355 0.16355 1"></material>-->
+<!--        <material name="gray" specular="0.0" shininess="0.25" rgba="0.80848 0.80848 0.80848 1"></material>-->
+<!--        <material name="metallic" specular="0" shininess="0.25" rgba="0.9 0.9 0.9 1"></material>-->
+
+<!--        <mesh class="right_hand" file="forearm_0.obj"></mesh>-->
+<!--        <mesh class="right_hand" file="forearm_1.obj"></mesh>-->
+<!--        <mesh class="right_hand" file="forearm_collision.obj"></mesh>-->
+<!--        <mesh class="right_hand" file="wrist.obj"></mesh>-->
+<!--        <mesh class="right_hand" file="palm.obj"></mesh>-->
+<!--        <mesh class="right_hand" file="f_knuckle.obj"></mesh>-->
+<!--        <mesh class="right_hand" file="f_proximal.obj"></mesh>-->
+<!--        <mesh class="right_hand" file="f_middle.obj"></mesh>-->
+<!--        <mesh class="right_hand" file="f_distal_pst.obj"></mesh>-->
+<!--        <mesh class="right_hand" file="lf_metacarpal.obj"></mesh>-->
+<!--        <mesh class="right_hand" file="th_proximal.obj"></mesh>-->
+<!--        <mesh class="right_hand" file="th_middle.obj"></mesh>-->
+<!--        <mesh class="right_hand" file="th_distal_pst.obj"></mesh>-->
+<!--    </asset>-->
+<!--</mujoco>-->
