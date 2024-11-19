@@ -1,7 +1,7 @@
 # VTDexManip: A Dataset and Benchmark for Visual-tactile Pretraining and Dexterous Manipulation with Reinforcement Learning
 
 [Dataset](https://1drv.ms/f/c/9054151f0ba654c9/EslUpgsfFVQggJB7AQAAAAABJiaQQJwGSvDLSjEs1gS1og) ( password: ICLR2025 )               
-[Pretraining models] ( using the dataset )
+[Pretraining models](https://github.com/kt0430/VTDexManipPretraining) ( using the dataset )
 
 ---
 
@@ -11,6 +11,7 @@ The repository is a benchmark for the study about visual-tactile dexterous manip
 
 # **Dependencies**
 
+The code is tesed on Ubuntu 20.04 with Nvidia GeForce RTX 3090 and CUDA 11.4
 - Create a conda environment and install  PyTorch
 
 ```bash
