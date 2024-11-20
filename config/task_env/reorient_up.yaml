@@ -1,5 +1,5 @@
 #env_params:
-task_name: 'ReorientUpCY'
+task_name: 'ReorientUp'
 task_description:
   'screw bottle cap for opening or closing'
 

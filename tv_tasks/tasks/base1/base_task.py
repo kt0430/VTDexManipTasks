@@ -60,8 +60,8 @@ class BaseTask():
         H, W, C = self.img_dim
         if cfg["env"]["obs_type"] in ["VisOnly","VisTac"]:
 
-            # self.img_buf = torch.zeros(
-            #     (self.num_envs, 224, 224, C), device='cpu', dtype=torch.float)
+            self.img_buf = torch.zeros(
+                (self.num_envs, 224, 224, C), device=self.device, dtype=torch.float)
             # if bi_hands:
             #     self.img_buf2 = torch.zeros(
             #         (self.num_envs, 224, 224, C), device=self.device, dtype=torch.float)
@@ -74,7 +74,7 @@ class BaseTask():
         #     (self.num_envs, H, W, C), device=self.device, dtype=torch.float)
 
             self.obs_states_buf = torch.zeros(
-                (self.num_envs, self.num_obs_states), device='cpu', dtype=torch.float)
+                (self.num_envs, self.num_obs_states), device=self.device, dtype=torch.float)
         else:
             self.obs_states_buf = torch.zeros(
                 (self.num_envs, self.num_obs_states), device=self.device, dtype=torch.float)
